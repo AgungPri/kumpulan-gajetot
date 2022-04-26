@@ -1,0 +1,87 @@
+import React, { Component } from 'react';
+import { Platform, StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
+import { MaterialIcons, MaterialCommunityIcons, Ionicons, FontAwesome, AntDesign, Entypo, FontAwesome5, Zocial, SimpleLineIcons } from '@expo/vector-icons';
+// import iconHome from './icon/test.png' memanggil image dengan indexing
+// <<<ini panduan command>>>
+// hapus backgroundColor <jika tidak digunakankarna ini tujuannya untuk awal awal biar mudah dalam design
+// selanjutnya tambahkan Image soruce=ukuran width dan heigh 26
+// kemudian remove backgroundColor box yellow saja
+// kemudian icon-active
+// kemudian text home diganti warna color: 'green'
+// selanjutnya kita akan mencoba men styling konten yang dibagian atas inini
+// remove style={style.welcome}
+// tambahkan warna putih wrapper untuk bagian navigation / footer biar sesuai
+// selanjutnya membuat search bar dan icon pada bagian atas
+// selanjutnya  buat <TextInput value="what do you want to eat? " /> dan lalu kasih border dan radius
+// ketika sudah mengatur dari icon dan text input maka ganti background utamanya adalah putih
+
+export default function App() {
+  return (
+    <View style={{ flex: 1, position: 'relative' }}>
+      {/* Icon Back */}
+      <View style={{ marginLeft: 20, marginBottom: 50 }}>
+        <View style={{ backgroundColor: 'white', paddingTop: 10, marginTop: 50 }}>
+          <AntDesign name="caretleft" size={40} color="#DDDDDD" />
+        </View>
+        <View style={{ flexDirection: 'row', padding: 5, backgroundColor: '#2EB086', marginTop: 10, borderWidth: 1, borderRadius: 15, borderColor: '#2EB086', marginRight: 10 }}>
+          <View style={{ fontWeight: 'bold', backgroundColor: '#2EB086', borderWidth: 2, borderRadius: 10, borderColor: '#2EB086' }}>
+            <Text style={{ fontSize: 25, fontWeight: 'bold', color: 'white' }}>Create Account</Text>
+          </View>
+        </View>
+        {/* Bagian nama  */}
+        <View style={{ flexDirection: 'row', padding: 5, backgroundColor: '#E8E8E8', marginTop: 10, borderWidth: 1, borderRadius: 15, borderColor: 'white', marginRight: 10 }}>
+          <View style={{ fontWeight: 'bold', backgroundColor: '#E8E8E8', borderColor: '#E8E8E8', borderWidth: 2, borderRadius: 10 }}>
+            <Text style={{ marginLeft: 39, fontSize: 15 }}>FULL NAME</Text>
+            <View style={{ flexDirection: 'row', marginTop: 5 }}>
+              <SimpleLineIcons style={{ marginBottom: 1, marginHorizontal: 5 }} name="people" size={24} color="black" />
+              <View>
+                <Text style={{ fontSize: 15, marginTop: 3, fontWeight: 'bold', color: 'black' }}>AGUNG PRIYATNA</Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        {/* bagian form Login */}
+        <View style={{ flexDirection: 'row' }}>
+          <View style={{ position: 'relative', flex: 1 }}>
+            <TextInput placeholder="email" style={{ marginTop: 30, borderWidth: 1, borderColor: '#E8E8E8', borderRadius: 25, height: 40, fontSize: 13, paddingLeft: 45, paddingRight: 20, backgroundColor: 'white', marginRight: 18 }} />
+            <AntDesign name="mail" size={16} color="black" style={{ position: 'absolute', top: 40, left: 15 }} />
+            {/* untuk menggatur img agar keatsas react native mempunya postion abosulte untuk img dan untuk relativenya dipasang di view */}
+          </View>
+        </View>
+        <View style={{ flexDirection: 'row' }}>
+          <View style={{ position: 'relative', flex: 1 }}>
+            <TextInput placeholder="Password" style={{ marginTop: 30, borderWidth: 1, borderColor: '#E8E8E8', borderRadius: 25, height: 40, fontSize: 13, paddingLeft: 45, paddingRight: 20, backgroundColor: 'white', marginRight: 18 }} />
+            <AntDesign name="lock" size={16} color="black" style={{ position: 'absolute', top: 40, left: 15 }} />
+            {/* untuk menggatur img agar keatsas react native mempunya postion abosulte untuk img dan untuk relativenya dipasang di view */}
+          </View>
+        </View>
+        <View style={{ flexDirection: 'row' }}>
+          <View style={{ position: 'relative', flex: 1 }}>
+            <TextInput placeholder=" Confirm Password" style={{ marginTop: 30, borderWidth: 1, borderColor: '#E8E8E8', borderRadius: 25, height: 40, fontSize: 13, paddingLeft: 45, paddingRight: 20, backgroundColor: 'white', marginRight: 18 }} />
+            <AntDesign name="lock" size={16} color="black" style={{ position: 'absolute', top: 40, left: 15 }} />
+            {/* untuk menggatur img agar keatsas react native mempunya postion abosulte untuk img dan untuk relativenya dipasang di view */}
+          </View>
+        </View>
+      </View>
+      {/* Tombol Sign Up */}
+      <View style={{ flexDirection: 'row', flex: 1, marginLeft: 20}}>
+        <TouchableOpacity style={{ paddingVertical: 2, backgroundColor: '#F55353', borderWidth: 10, borderColor: '#F55353', borderRadius: 10, height: 50}}>
+          <Text style={{ color: 'white', fontSize: 20, fontWeight: 'bold' }}>SIGN UP</Text>
+        </TouchableOpacity>
+      </View>
+      {/* Form Login */}
+      {/* Footer Untuk bagian baawah */}
+      <View style={{ height: 54, backgroundColor: 'white' }}>
+        <View style={{ justifyContent: 'center', alignItems: 'center', margin: 15, flexDirection: 'row' }}>
+          <Text>Already have a account?</Text>
+          <Text style={{ marginLeft: 5, color: '#2EB086', fontWeight: 'bold', fontStyle: 'italic' }}>Sign in</Text>
+          {/* <Image style={{ width: 26, height: 26 }} source={require('./icon/test.png')} /> */}
+        </View>
+      </View>
+    </View>
+  );
+
+}
+
+const style = StyleSheet.create({
+});
